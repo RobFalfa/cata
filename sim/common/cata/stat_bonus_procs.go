@@ -947,6 +947,62 @@ func init() {
 		ProcChance: 1, //TODO: verify proc chance, seems wrong?
 		ICD:        time.Second * 60,
 	})
+
+	shared.NewProcStatBonusEffect(shared.ProcStatBonusEffect{
+		Name:       "Creche of the Final Dragon",
+		ID:         77205,
+		AuraID:     107988,
+		Bonus:      stats.Stats{stats.MeleeCrit: 2904, stats.SpellCrit: 2904},
+		Duration:   time.Second * 20,
+		Callback:   core.CallbackOnSpellHitDealt,
+		ProcMask:   core.ProcMaskDirect | core.ProcMaskProc,
+		Harmful:    true,
+		Outcome:    core.OutcomeLanded,
+		ProcChance: 0.15,
+		ICD:        time.Second * 115,
+	})
+
+	shared.NewProcStatBonusEffect(shared.ProcStatBonusEffect{
+		Name:       "Creche of the Final Dragon (Heroic)",
+		ID:         77992,
+		AuraID:     109744,
+		Bonus:      stats.Stats{stats.MeleeCrit: 3278, stats.SpellCrit: 3278},
+		Duration:   time.Second * 20,
+		Callback:   core.CallbackOnSpellHitDealt,
+		ProcMask:   core.ProcMaskDirect | core.ProcMaskProc,
+		Harmful:    true,
+		Outcome:    core.OutcomeLanded,
+		ProcChance: 0.15,
+		ICD:        time.Second * 115,
+	})
+
+	shared.NewProcStatBonusEffect(shared.ProcStatBonusEffect{
+		Name:       "Soulshifter Vortex",
+		ID:         77206,
+		AuraID:     107986,
+		Bonus:      stats.Stats{stats.Mastery: 2904},
+		Duration:   time.Second * 20,
+		Callback:   core.CallbackOnSpellHitDealt,
+		ProcMask:   core.ProcMaskDirect | core.ProcMaskProc,
+		Harmful:    true,
+		Outcome:    core.OutcomeLanded,
+		ProcChance: 0.15,
+		ICD:        time.Second * 115,
+	})
+
+	shared.NewProcStatBonusEffect(shared.ProcStatBonusEffect{
+		Name:       "Soulshifter Vortex (Heroic)",
+		ID:         77990,
+		AuraID:     109776,
+		Bonus:      stats.Stats{stats.Mastery: 3278},
+		Duration:   time.Second * 20,
+		Callback:   core.CallbackOnSpellHitDealt,
+		ProcMask:   core.ProcMaskDirect | core.ProcMaskProc,
+		Harmful:    true,
+		Outcome:    core.OutcomeLanded,
+		ProcChance: 0.15,
+		ICD:        time.Second * 115,
+	})
 }
 
 var ItemSetAgonyAndTorment = core.NewItemSet(core.ItemSet{
