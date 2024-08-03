@@ -174,4 +174,134 @@ func init() {
 		Harmful:    false,
 		ProcChance: 1,
 	})
+
+	shared.NewStackingStatBonusEffect(shared.StackingStatBonusEffect{
+		Name:       "Eye of Unmaking",
+		ID:         77200,
+		AuraID:     107966,
+		Bonus:      stats.Stats{stats.Strength: 88},
+		MaxStacks:  10,
+		ProcMask:   core.ProcMaskMelee,
+		Duration:   time.Second * 10,
+		Callback:   core.CallbackOnSpellHitDealt,
+		Harmful:    false,
+		ProcChance: 1,
+	})
+
+	shared.NewStackingStatBonusEffect(shared.StackingStatBonusEffect{
+		Name:       "Eye of Unmaking (Heroic)",
+		ID:         77997,
+		AuraID:     109750,
+		Bonus:      stats.Stats{stats.Strength: 99},
+		MaxStacks:  10,
+		ProcMask:   core.ProcMaskMelee,
+		Duration:   time.Second * 10,
+		Callback:   core.CallbackOnSpellHitDealt,
+		Harmful:    false,
+		ProcChance: 1,
+	})
+
+	shared.NewStackingStatBonusEffect(shared.StackingStatBonusEffect{
+		Name:       "Resolve of Undying",
+		ID:         77201,
+		AuraID:     107968,
+		Bonus:      stats.Stats{stats.Dodge: 88},
+		MaxStacks:  10,
+		ProcMask:   core.ProcMaskMelee,
+		Duration:   time.Second * 10,
+		Callback:   core.CallbackOnSpellHitDealt,
+		Harmful:    false,
+		ProcChance: 1,
+	})
+
+	shared.NewStackingStatBonusEffect(shared.StackingStatBonusEffect{
+		Name:       "Resolve of Undying (Heroic)",
+		ID:         77998,
+		AuraID:     109782,
+		Bonus:      stats.Stats{stats.Dodge: 99},
+		MaxStacks:  10,
+		ProcMask:   core.ProcMaskMelee,
+		Duration:   time.Second * 10,
+		Callback:   core.CallbackOnSpellHitDealt,
+		Harmful:    false,
+		ProcChance: 1,
+	})
+
+	shared.NewStackingStatBonusEffect(shared.StackingStatBonusEffect{
+		Name:       "Wrath of Unchaining",
+		ID:         77197,
+		AuraID:     107960,
+		Bonus:      stats.Stats{stats.Agility: 88},
+		MaxStacks:  10,
+		ProcMask:   core.ProcMaskMeleeOrRanged,
+		Duration:   time.Second * 10,
+		Callback:   core.CallbackOnSpellHitDealt,
+		Harmful:    false,
+		ProcChance: 1,
+	})
+
+	shared.NewStackingStatBonusEffect(shared.StackingStatBonusEffect{
+		Name:       "Wrath of Unchaining (Heroic)",
+		ID:         77994,
+		AuraID:     109719,
+		Bonus:      stats.Stats{stats.Agility: 99},
+		MaxStacks:  10,
+		ProcMask:   core.ProcMaskMeleeOrRanged,
+		Duration:   time.Second * 10,
+		Callback:   core.CallbackOnSpellHitDealt,
+		Harmful:    false,
+		ProcChance: 1,
+	})
+
+	shared.NewStackingStatBonusEffect(shared.StackingStatBonusEffect{
+		Name:       "Will of Unbinding",
+		ID:         77198,
+		AuraID:     107970,
+		Bonus:      stats.Stats{stats.Intellect: 88},
+		MaxStacks:  10,
+		ProcMask:   core.ProcMaskSpellDamage,
+		Duration:   time.Second * 10,
+		Callback:   core.CallbackOnSpellHitDealt,
+		Harmful:    false,
+		ProcChance: 1,
+	})
+
+	shared.NewStackingStatBonusEffect(shared.StackingStatBonusEffect{
+		Name:       "Will of Unbinding (Heroic)",
+		ID:         77995,
+		AuraID:     109795,
+		Bonus:      stats.Stats{stats.Intellect: 99},
+		MaxStacks:  10,
+		ProcMask:   core.ProcMaskSpellDamage,
+		Duration:   time.Second * 10,
+		Callback:   core.CallbackOnSpellHitDealt,
+		Harmful:    false,
+		ProcChance: 1,
+	})
+
+	shared.NewStackingStatBonusEffect(shared.StackingStatBonusEffect{
+		Name:       "Heart of Unliving",
+		ID:         77199,
+		AuraID:     107962,
+		Bonus:      stats.Stats{stats.Spirit: 88},
+		MaxStacks:  10,
+		ProcMask:   core.ProcMaskSpellHealing,
+		Duration:   time.Second * 10,
+		Callback:   core.CallbackOnHealDealt, //has procmask 16384 (Cast heal), could be CallbackOnCastComplete?
+		Harmful:    false,
+		ProcChance: 1,
+	})
+
+	shared.NewStackingStatBonusEffect(shared.StackingStatBonusEffect{
+		Name:       "Heart of Unliving (Heroic)",
+		ID:         77996,
+		AuraID:     109813,
+		Bonus:      stats.Stats{stats.Spirit: 99},
+		MaxStacks:  10,
+		ProcMask:   core.ProcMaskSpellHealing,
+		Duration:   time.Second * 10,
+		Callback:   core.CallbackOnHealDealt,
+		Harmful:    false,
+		ProcChance: 1,
+	})
 }
