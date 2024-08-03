@@ -31,6 +31,7 @@ func init() {
 	shared.NewStrengthActive(62469, 1605, time.Second*20, time.Minute*2)  // Impatience of Youth (Horde)
 	shared.NewStrengthActive(61034, 1605, time.Second*20, time.Minute*2)  // Vicious Gladiator's Badge of Victory
 	shared.NewStrengthActive(69002, 1277, time.Second*15, time.Minute)    // Essence of the Eternal Flame
+	shared.NewStrengthActive(77116, 2290, time.Second*15, time.Second*90) // Rotting Skull
 
 	// AGILITY
 	shared.NewAgilityActive(63840, 1095, time.Second*15, time.Second*90) // Juju of Nimbleness
